@@ -1,14 +1,18 @@
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .infoBox {
-    /* for each box to get max width as they can */
-  flex: 1; 
+  /* for each box to get max width as they can */
+  flex: 1;
   cursor: pointer;
 }
 
 /* except the last child */
 .infoBox:not(:last-child) {
   margin-right: 15px;
+}
+
+.infoBox__title {
+  font-size: 1.5vw;
 }
 
 .infoBox__cases {
@@ -43,4 +47,32 @@
   font-weight: 700 !important;
   font-size: 0.8rem !important;
   margin-top: 15px !important;
+}
+
+@media (max-width: 450px) {
+  .infoBox__cases {
+    color: #cc1034;
+    font-weight: 600;
+    font-size: 4vw;
+    margin-bottom: 0.5rem;
+  }
+
+  .infoBox__cases--green {
+    color: lightgreen;
+  }
+
+  .infoBox__total {
+    color: #6c757d;
+    font-weight: 700 !important;
+    font-size: 3vw !important;
+    margin-top: 15px !important;
+  }
+
+  .infoBox__cases--grey {
+    color: grey;
+  }
+
+  .infoBox__title {
+    font-size: 3vw;
+  }
 }
