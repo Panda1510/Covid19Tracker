@@ -85,12 +85,17 @@ function LineGraph({ casesType, ...props }) {
 
   let bgColor = "rgba(204, 16, 52, 0.5)";
   let bordColor = "#CC1034";
+  let legendWritten = casesType;
   if (casesType === "recovered") {
     bgColor = "greenyellow";
     bordColor = "green";
   } else if (casesType === "deaths") {
     bgColor = "rgba(0, 0, 0, 0.3)";
     bordColor = "grey";
+  }
+
+  if(casesType === 'cases'){
+    legendWritten = 'confirmed'
   }
 
   console.log(casesType);
@@ -104,7 +109,7 @@ function LineGraph({ casesType, ...props }) {
                 backgroundColor: bgColor,
                 borderColor: bordColor,
                 data: data,
-                label: `${casesType}`,
+                label: legendWritten,
                 fill: true,
               },
             ],
