@@ -29,6 +29,10 @@ body {
   justify-content: space-between;
 }
 
+.header-heading {
+  color: red;
+}
+
 .app__left {
   flex: 0.9;
 }

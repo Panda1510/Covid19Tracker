@@ -83,6 +83,17 @@ function LineGraph({ casesType, ...props }) {
     fetchData();
   }, [casesType]);
 
+  let bgColor = "rgba(204, 16, 52, 0.5)";
+  let bordColor = "#CC1034";
+  if (casesType === "recovered") {
+    bgColor = "greenyellow";
+    bordColor = "green";
+  } else if (casesType === "deaths") {
+    bgColor = "rgba(0, 0, 0, 0.3)";
+    bordColor = "grey";
+  }
+
+  console.log(casesType);
   return (
     <div className={props.className}>
       {data?.length > 0 && (
@@ -90,10 +101,10 @@ function LineGraph({ casesType, ...props }) {
           data={{
             datasets: [
               {
-                backgroundColor: "rgba(204, 16, 52, 0.5)",
-                borderColor: "#CC1034",
+                backgroundColor: bgColor,
+                borderColor: bordColor,
                 data: data,
-                label: 'Active',
+                label: `${casesType}`,
                 fill: true,
               },
             ],

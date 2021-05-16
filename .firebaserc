@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "covid-19-tracker-63961"
+    "default": "covid-19-tracker-63961",
+    "deploying": "covid19-tracker-43cf8",
+    "staging": "covid19-tracker-43cf8"
   }
 }

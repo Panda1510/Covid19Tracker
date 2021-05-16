@@ -91,7 +91,7 @@ function App() {
       <div className="app__left">
         <div className="app__header">
           {/* Header */}
-          <h1>Covid-19 Tracker</h1>
+          <h1 className = 'header-heading'>Covid-19 Tracker</h1>
 
           {/* Title + Select input dropdown */}
           <FormControl className="app__dropdown">
@@ -120,6 +120,7 @@ function App() {
             cases={prettyPrintStat(countryInfo.todayCases)}
             total={prettyPrintStat(countryInfo.cases)}
             onClick={(e) => setCasesType("cases")}
+            isloading={isLoading}
           />
 
           {/* InfoBoxes: Recoveries */}
@@ -129,6 +130,7 @@ function App() {
             cases={prettyPrintStat(countryInfo.todayRecovered)}
             total={prettyPrintStat(countryInfo.recovered)}
             onClick={(e) => setCasesType("recovered")}
+            isloading={isLoading}
           />
 
           {/* InfoBoxes: Deaths */}
@@ -139,6 +141,7 @@ function App() {
             cases={prettyPrintStat(countryInfo.todayDeaths)}
             total={prettyPrintStat(countryInfo.deaths)}
             onClick={(e) => setCasesType("deaths")}
+            isloading={isLoading}
           />
         </div>
 
